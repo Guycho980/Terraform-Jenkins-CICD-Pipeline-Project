@@ -22,7 +22,5 @@ resource "google_storage_bucket" "prod-private-buckets" {
   name          = "prod-no-public-access-bucket-rn-${count.index}"
   location      = "US"
   force_destroy = true
-
-  public_access_prevention = "enforced"
-  count                    = 2
+  count         = 2
 }
